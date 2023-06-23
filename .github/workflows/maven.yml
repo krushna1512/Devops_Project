@@ -27,4 +27,11 @@ jobs:
         cache: maven
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      
+    - name: Print Container Details
+      run: |
+        echo "Container Details:"
+        uname -a
+        cat /etc/os-release
+        java -version
 
